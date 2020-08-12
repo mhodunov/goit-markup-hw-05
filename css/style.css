@@ -153,6 +153,9 @@ img {
 
 .site-nav-link {
 	color: var(--secondary-text-color);
+	transition-property: color, background-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav-link:hover::after,
@@ -170,10 +173,8 @@ img {
 
 }
 
-.site-nav-link:hover::after,
-.site-nav-link:focus::after {
-
-	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+.site-nav-link::after {
+	background-color: #fff;
 
 }
 
@@ -184,6 +185,9 @@ img {
 .contacts-link {
 	color: var(--primary-text-color);
 	fill: var(--primary-text-color);
+	transition-property: color, fill;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-contacts {
@@ -197,8 +201,6 @@ img {
 .contacts-link:focus {
 	color: var(--accent-color);
 	fill: var(--accent-color);
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-		fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*Hero*/
@@ -260,6 +262,10 @@ img {
 	letter-spacing: 0.03em;
 	padding: 6px 22px;
 	min-width: 73px;
+
+	transition-property: color, background-color, box-shadow;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-item {
@@ -277,9 +283,6 @@ img {
 	color: var(--additional-color);
 	outline: none;
 	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-		background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-		box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*Section*/
@@ -438,12 +441,15 @@ img {
 	height: 90px;
 	border: 1px solid var(--clients-logo-border);
 	border-radius: 4px;
+
+	transition-property: border-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-list-item:hover,
 .clients-list-item:focus {
 	border-color: var(--accent-color);
-	transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-list-item:not(:last-child) {
@@ -459,12 +465,15 @@ img {
 	margin: 0;
 	padding: 0;
 	fill: var(--clients-logo-border);
+
+	transition-property: fill;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-link:hover,
 .clients-link:focus {
 	fill: var(--accent-color);
-	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*Portfolio*/
@@ -475,11 +484,14 @@ img {
 	margin-bottom: 30px;
 	background: #ffffff;
 	border: 1px solid #eeeeee;
+
+	transition-property: box-shadow;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-card:hover {
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-card:nth-last-child(-n + 3) {
@@ -516,7 +528,10 @@ img {
 	transform: translatey(0);
 	width: 370px;
 	height: 294px;
-	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1)
+
+	transition-property: transform;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-item-description {
@@ -625,6 +640,13 @@ img {
 	padding: 12px;
 
 	fill: var(--clients-logo-border);
+	background-color: #ffffff;
+	border-radius: 50%;
+
+	transition-property: fill,
+		background-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link-item:hover,
@@ -635,8 +657,6 @@ img {
 	background-size: 44px 44px;
 	background-color: var(--accent-color);
 	border-radius: 50%;
-	transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-		background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link-icon:hover,
@@ -649,6 +669,11 @@ img {
 	fill: var(--additional-color);
 	background-color: rgba(255, 255, 255, 0.1);
 	border-radius: 50%;
+
+	transition-property: fill,
+		background-color;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .follow-block {
