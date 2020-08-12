@@ -232,6 +232,7 @@ img {
 .filter-item {
 	margin-left: 8px;
 }
+
 .filter-item:first-child {
 	margin-left: 0;
 }
@@ -279,6 +280,9 @@ img {
 	padding-top: 27px;
 	padding-bottom: 27px;
 	display: block;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 
 	background-color: var(--overlay-color);
 	color: var(--additional-color);
@@ -322,6 +326,8 @@ img {
 
 .products-item {
 	width: calc((100% - 60px) / 3);
+
+	position: relative;
 }
 
 .products-item:not(:last-child) {
@@ -457,6 +463,20 @@ img {
 	letter-spacing: 0.06em;
 }
 
+.overlay-portfolio-text {
+	position: relative;
+	overflow: hidden;
+
+
+}
+
+.overlay-portfolio-text:hover .portfolio-item-text {
+
+	transform: translatey(0);
+	width: 370px;
+	height: 294px;
+}
+
 .portfolio-item-description {
 	margin-top: 4px;
 	margin-bottom: 0;
@@ -468,11 +488,19 @@ img {
 .portfolio-item-text {
 	margin: 0;
 	padding: 63px 24px;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
 
 	background-color: var(--portfolio-overlay);
 	color: var(--additional-color);
 	font-size: 18px;
 	line-height: 1.56;
+
+	transform: translatey(100%);
+	transition: transform 250ms ease;
 }
 
 .filter-list {
@@ -546,10 +574,9 @@ img {
 }
 
 .social-link:hover,
-.social-link:focus {
-}
+.social-link:focus {}
 
-.social-link > li:not(:last-child) {
+.social-link>li:not(:last-child) {
 	margin-right: 10px;
 }
 
