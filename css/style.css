@@ -254,6 +254,21 @@ img {
 	color: var(--additional-color);
 }
 
+.subscribe {
+	padding-left: 29px;
+	padding-right: 28px;
+}
+
+.subscribe-icon {
+	fill: var(--additional-color);
+
+	width: 24px;
+	height: 24px;
+	margin-left: 10px;
+
+	vertical-align: middle;
+}
+
 .button.filter {
 	background-color: var(--secondary-background);
 	color: var(--secondary-text-color);
@@ -481,14 +496,24 @@ img {
 	width: calc((100% - 60px) / 3);
 	margin-right: 30px;
 	margin-bottom: 30px;
+}
+
+.portfolio-card-link {
+	color: inherit;
+	text-decoration: none;
+	display: block;
+	margin: 0;
+	padding: 0;
+
 	background: #ffffff;
 
-	transition-property: box-shadow;
+	transition-property: box-shadow, transform;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-card:hover {
+.portfolio-card-link:hover,
+.portfolio-card-link:focus {
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -522,7 +547,8 @@ img {
 	overflow: hidden;
 }
 
-.portfolio-card:hover .portfolio-item-text {
+.portfolio-card-link:hover .portfolio-item-text,
+.portfolio-card-link:focus .portfolio-item-text {
 	transform: translatey(0);
 	width: 370px;
 	height: 294px;
@@ -696,9 +722,9 @@ img {
 
 .modal-window {
 	position: absolute;
-	top: 221px;
+	top: 50%;
 	left: 50%;
-	transform: translate(-50%, 0%);
+	transform: translate(-50%, -50%);
 	width: 90%;
 	max-width: 528px;
 	height: 500px;
