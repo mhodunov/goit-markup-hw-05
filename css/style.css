@@ -213,10 +213,19 @@ img {
 	padding-bottom: 200px;
 	height: 600px;
 	max-width: 1600px;
+	margin-left: auto;
+	margin-right: auto;
+
 	background-color: var(--overlay-color);
 	background-image: linear-gradient(var(--overlay-hero), var(--overlay-hero)), url(../images/hero.jpg);
 	background-position: center;
 	background-size: cover;
+}
+
+.hero-text-area {
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .hero-title {
